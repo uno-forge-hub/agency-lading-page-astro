@@ -1,0 +1,24 @@
+---
+import Expertises from "@components/Expertises.astro";
+import HeroSection from "@components/HeroSection.astro";
+import SocialProof from "@components/SocialProof.astro";
+import Layout from "@layouts/Layout.astro";
+import Cta from "@components/Cta.astro";
+import AboutUs from "@components/AboutUs.astro";
+
+---
+
+<Layout
+	title="InnoTech - Innovative Marketing Agency | SEO & Digital Marketing"
+	description="Elevate your brand with InnoTech's innovative marketing solutions. We specialize in SEO optimization, social media marketing, and influencer partnerships to grow your business."
+	keywords="marketing agency, SEO optimization, social media marketing, influencer marketing, digital marketing, brand growth, online visibility"
+	ogImage="/og-image.jpg"
+>
+	<main>
+		<HeroSection/>
+		<SocialProof/>
+		<Expertises/>
+		<AboutUs />
+		<Cta/>
+	</main>
+</Layout>

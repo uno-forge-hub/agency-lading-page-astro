@@ -1,0 +1,37 @@
+---
+const items = [
+  {
+    path: "#casestudies",
+    text: "Case studies",
+  },
+  {
+    path: "#expertises",
+    text: "Expertises",
+  },
+  {
+    path: "#about",
+    text: "About US",
+  },
+  {
+    path: "#faq",
+    text: "Faq",
+  },
+];
+---
+
+<ul
+  class="border-t b-border lg-b-t-0 p6 lg-p0 flex flex-col lg-flex-row gap-y-4 gap-x-3 text-fg w-full lg-justify-center lg-items-center"
+>
+  {
+    items.map((item) => (
+      <li>
+        <a
+          href={item.path}
+          class="duration-300 font-medium ease-linear hover-text-primary text-fg-muted py3"
+        >
+          {item.text}
+        </a>
+      </li>
+    ))
+  }
+</ul>

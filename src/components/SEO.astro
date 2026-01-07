@@ -1,0 +1,70 @@
+---
+export interface Props {
+  title?: string;
+  description?: string;
+  keywords?: string;
+  author?: string;
+  ogType?: string;
+  ogImage?: string;
+  ogUrl?: string;
+  twitterCard?: string;
+  twitterSite?: string;
+  twitterCreator?: string;
+  canonicalUrl?: string;
+  robots?: string;
+}
+
+const {
+  title = "InnoTech - Innovative Marketing Agency",
+  description = "Elevate your brand with our innovative marketing solutions. We specialize in SEO optimization, social media marketing, and influencer partnerships.",
+  keywords = "marketing agency, SEO optimization, social media marketing, influencer marketing, digital marketing, brand growth",
+  author = "InnoTech",
+  ogType = "website",
+  ogImage = "/og-image.jpg",
+  ogUrl = Astro.url.href,
+  twitterCard = "summary_large_image",
+  twitterSite = "@innotech",
+  twitterCreator = "@innotech",
+  canonicalUrl = Astro.url.href,
+  robots = "index, follow",
+} = Astro.props;
+
+const siteTitle = title;
+---
+
+<!-- Primary Meta Tags -->
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="generator" content={Astro.generator} />
+<title>{siteTitle}</title>
+<meta name="title" content={siteTitle} />
+<meta name="description" content={description} />
+<meta name="keywords" content={keywords} />
+<meta name="author" content={author} />
+<meta name="robots" content={robots} />
+<link rel="canonical" href={canonicalUrl} />
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content={ogType} />
+<meta property="og:url" content={ogUrl} />
+<meta property="og:title" content={siteTitle} />
+<meta property="og:description" content={description} />
+<meta property="og:image" content={ogImage} />
+<meta property="og:site_name" content="InnoTech" />
+
+<!-- Twitter -->
+<meta name="twitter:card" content={twitterCard} />
+<meta name="twitter:url" content={ogUrl} />
+<meta name="twitter:title" content={siteTitle} />
+<meta name="twitter:description" content={description} />
+<meta name="twitter:image" content={ogImage} />
+{twitterSite && <meta name="twitter:site" content={twitterSite} />}
+{twitterCreator && <meta name="twitter:creator" content={twitterCreator} />}
+
+<!-- Favicon -->
+<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+<!-- Additional SEO -->
+<meta name="theme-color" content="#ffffff" />
+<meta name="format-detection" content="telephone=no" />
+
