@@ -20,20 +20,25 @@ import NavItems from "./NavItems.astro";
         <a href="/" class="relative flex items-center gap-3">
           <div class="relative w-7 h-7 overflow-hidden flex rounded-xl">
             <span
-              class="absolute size-4 -top-1 -right-1 bg-secondary rd-md rotate-45"
+              class="absolute size-4 -top-1 -right-1 bg-secondary/60 rd-md rotate-45"
             ></span>
             <span
-              class="absolute size-4 -bottom-1 -right-1 bg-secondary rd-md rotate-45"
+              class="absolute size-4 -top-1 -left-1 bg-primary rd-md rotate-45"
             ></span>
             <span
-              class="absolute size-4 -bottom-1 -left-1 bg-primary rd-md rotate-45"
+              class="absolute size-4 -bottom-1 -right-1 bg-primary rd-md rotate-45"
             ></span>
             <span
-              class="absolute size-2 rd-full bg-primary500 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
+              class="absolute size-4 -bottom-1 -left-1 bg-primary/60 rd-md rotate-45"
+            ></span>
+            <span
+              class="absolute size-2 rd-full bg-primary top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
             ></span>
           </div>
-          <div class="inline-flex text-lg font-semibold text-fg-title">
-            InnoTech
+          <div
+            class="hidden sm-inline-flex text-lg font-semibold text-fg-title"
+          >
+            InnoAgency
           </div>
         </a>
       </div>

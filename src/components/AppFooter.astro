@@ -1,3 +1,7 @@
+---
+import ThemeSwitcher from "./ThemeSwitcher.astro";
+---
+
 <footer class="bg-bg text-fg-muted text-sm">
   <div
     class="max-w7xl mx-a px5 sm-px10 md-px12 lg-px5 grid grid-cols-2 lg-grid-cols-6 gap12 lg-gap16 py20"
@@ -6,26 +10,30 @@
       <a href="/" class="relative flex items-center gap-3">
         <div class="relative w-7 h-7 overflow-hidden flex rounded-xl">
           <span
-            class="absolute size-4 -top-1 -right-1 bg-secondary rd-md rotate-45"
+            class="absolute size-4 -top-1 -right-1 bg-secondary/60 rd-md rotate-45"
           ></span>
           <span
-            class="absolute size-4 -bottom-1 -right-1 bg-secondary rd-md rotate-45"
+            class="absolute size-4 -top-1 -left-1 bg-primary rd-md rotate-45"
           ></span>
           <span
-            class="absolute size-4 -bottom-1 -left-1 bg-primary rd-md rotate-45"
+            class="absolute size-4 -bottom-1 -right-1 bg-primary rd-md rotate-45"
           ></span>
           <span
-            class="absolute size-2 rd-full bg-primary500 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
+            class="absolute size-4 -bottom-1 -left-1 bg-primary/60 rd-md rotate-45"
+          ></span>
+          <span
+            class="absolute size-2 rd-full bg-primary top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
           ></span>
         </div>
         <div class="inline-flex text-lg font-semibold text-fg-title">
-          InnoTech
+          InnoAgency
         </div>
       </a>
       <p class="max-w-lg">
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tenetur quo
-        aliquam est ipsam. Magni, iusto,
+        We are a team of passionate designers and developers who are always
+        looking for new ways to create beautiful and functional websites.
       </p>
+      <ThemeSwitcher />
     </div>
     <div class="space-y-6">
       <h1 class="text-sm font-medium text-fg-title">Links</h1>
@@ -101,7 +109,7 @@
       class="w-full flex flex-col md-flex-row gap-4 items-center sm-justify-between py3 b-t b-border text-fg"
     >
       <div class="flex text-center sm-text-left sm-min-w-max max-w-full">
-        <p>© 2025 unoUI. All right reserved</p>
+        <p>© {new Date().getFullYear()} Inno Agency. All right reserved</p>
       </div>
       <div class="flex justify-center sm-justify-end w-full gap-3">
         <a

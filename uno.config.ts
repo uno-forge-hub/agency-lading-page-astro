@@ -9,10 +9,6 @@ import { flexillaPreset } from "@unifydev/flexilla"
 
 
 export default defineConfig({
-    shortcuts: [
-        {
-        }
-    ],
     theme: {
         borderRadius: {
             'ui': "var(--radius-ui)"
